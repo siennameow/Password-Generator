@@ -17,7 +17,14 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-//.innerHTML 
+
+
+//create arrays for all letter source (Should have some better way , will check later)
+var uppercaseSource = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var lowercaseSource = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var numberSource = ["0","1","2","3","4","5","6","7","8","9"];
+var characterSource = [" ","!","#","$","%","&","'","(",'"',")","*","+",",","-",".","/",":",";","<","=",">","?","@","[","\\","]","^","_","`","{","|","}","~"];
+
 
 
 function generatePassword() {
@@ -27,13 +34,13 @@ function generatePassword() {
     alert("Your password should be 8-128 caracters!");
  }
  
- else {
+  else {
   var uppercase = confirm("Include Uppercase letter?");
   var lowercase = confirm("Include Uppercase letter?");
-  var numeric = confirm("Include Uppercase letter?");
-  var specialcharacter = confirm("Include Uppercase letter?");
+  var number = confirm("Include Uppercase letter?");
+  var character = confirm("Include Uppercase letter?");
   
-        if (uppercase + lowercase + numeric + specialcharacter === 0) {
+        if (uppercase + lowercase + number + character === 0) {
       alert("Your password should contain at least one character type!");
         }
         else {
@@ -42,3 +49,10 @@ function generatePassword() {
   }
 
 }
+
+
+
+
+
+
+
