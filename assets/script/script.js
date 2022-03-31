@@ -1,3 +1,7 @@
+// GOAL:    generatePassword() {
+//   return "Please Try Again!" ;
+// }
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -13,7 +17,10 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-function userChoice() {
+//.innerHTML 
+
+
+function generatePassword() {
   var password_length = prompt("Please enter length of the password");
   
   if (password_length === null || password_length< 8 || password_length > 128) {
