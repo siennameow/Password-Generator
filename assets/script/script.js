@@ -21,6 +21,8 @@ function draw (pool){
 }
 
 //Step 2.3 create a function that record userpick and put different variable into different placeholder.
+    //Make sure I got at least 1 character from the user picked array and add together all the user-pick-arrays to a remaim-array to draw the the rest of password. 
+    //The character remain for drawing = the password length they choose - how many character type they choose.
 function record(userInput,sourceArray,recordResult, remainPool) {
   if (userInput === true){
     var record1Draw = draw(sourceArray);
@@ -30,9 +32,9 @@ function record(userInput,sourceArray,recordResult, remainPool) {
 }
 //Step 2.4 create function that to generate user prompt/alert/confirm according to user preference.
 function generatePassword() {
-  var password_length = prompt("How many characters would you like your password to contain?");
+  var passwordLength = prompt("How many characters would you like your password to contain?");
   
-  if (password_length === null || password_length< 8 || password_length > 128) {
+  if (passwordLength === null || passwordLength< 8 || passwordLength > 128) {
     alert("Your password should be at least 8 characters and no more than 128 characters!");
  }
  
@@ -59,8 +61,15 @@ function generatePassword() {
 
 
 //Step 2.6 :collect placeholder result and add it to the initial password.
+        var remainAttempt = passwordLength - (uppercase+lowercase+number+character);
 
-
+        for (var i = 0; i<remainAttempt; i++) {
+                  var record2Draw = draw(remainPool);
+                  recordResult.push(record2Draw);
+            }
+          
+        var initialPassword = recordResult.join("");
+        return initialPassword;
 
 // Step 2.7 : Shuffle the initial password to generate the final password.
   }
