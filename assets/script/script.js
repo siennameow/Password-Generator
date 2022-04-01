@@ -21,7 +21,13 @@ function draw (pool){
 }
 
 //Step 2.3 create a function that record userpick and put different variable into different placeholder.
-
+function record(userInput,sourceArray,recordResult, remainPool) {
+  if (userInput === true){
+    var record1Draw = draw(sourceArray);
+    recordResult.push(...record1Draw);
+    remainPool.push(...sourceArray)
+    }
+}
 //Step 2.4 create function that to generate user prompt/alert/confirm according to user preference.
 function generatePassword() {
   var password_length = prompt("How many characters would you like your password to contain?");
@@ -43,7 +49,13 @@ function generatePassword() {
         alert("You are good to go!");
         }
 //Step 2.5 : if user complete the pick, then do the function in step2.3
+        var recordResult = []
+        var remainPool = [];
 
+        record(uppercase,uppercaseSource,recordResult,remainPool);
+        record(lowercase,lowercaseSource,recordResult,remainPool);
+        record(number,numberSource,recordResult,remainPool);
+        record(character,characterSource,recordResult,remainPool);
 
 
 //Step 2.6 :collect placeholder result and add it to the initial password.
