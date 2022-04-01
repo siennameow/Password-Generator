@@ -70,19 +70,16 @@ function generatePassword() {
               // var finalPassword = recordResult.join("");
               // return finalPassword;
               // Step 3.7 : Shuffle the initial password to generate the final password.
-                function shuffle(meow) {
-                    var finalPassword = [];
-                    var restDraw = meow ;
-                    for (var i = 0; i<meow.lenth; i++) {
-                            var pick =  Math.floor(Math.random() * restDraw.length);
-                            finalPassword.push(restDraw[pick]);
-                            restDraw.splice(pick, 1);
-                        }
-                    return finalPassword;
-                  }
-                var shuffledPassword = shuffle(recordResult);
-                var finalPassword = shuffledPassword.join("");
-                return finalPassword;
+                // var finalPassword = [];
+                // var restDraw = recordResult ;
+                // for (var i = 0; i<recordResult.length; i++) {
+                //     var pick =  Math.floor(Math.random() * restDraw.length);
+                //     finalPassword.push(restDraw[pick]);
+                //     restDraw.splice(pick, 1);
+                //   }
+                console.log(recordResult.join(""));
+                //console.log(finalPassword.join(""));
+                // return finalPassword;
           }
        }  
 }
