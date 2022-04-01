@@ -93,7 +93,7 @@ function generatePassword() {
                 return finalPassword;
           }
        } 
-       return "Please try one more time!";
+       return "Please try again!";
 }
 
 //Step 4: Write password to the #password input
