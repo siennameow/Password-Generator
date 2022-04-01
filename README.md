@@ -2,7 +2,7 @@
 
 ## Description 📝 
 
-Using password day-to-day? Passwords are a real security threat. Over 80% of hacking-related breaches are due to weak or stolen passwords, a recent report shows . So if you want to safeguard your personal info and assets, creating secure passwords is a big first step. And that’s where this Password Generator can help - to generate a password as you want within a minute!
+Using password day-to-day? Passwords are a real security threat. Over 80% of hacking-related breaches are due to weak or stolen passwords, a recent report shows . So if you want to safeguard your personal info and assets, creating secure passwords is a big first step. And that’s where this Password Generator can help - to generate a password as you want in a second!
 
 This impossible-to-crack password is complex with multiple types of characters (uppercase, lowercase, numeric, special symbol) and you can select the length of the password (from 8 to 128 characters).This password generator tool is hosted on a webpage and easy for you to access through one link : https://siennameow.github.io/Password-Generator/. 
 
