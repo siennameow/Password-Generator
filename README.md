@@ -80,10 +80,10 @@ The length of the password should be at least 8 and no more than 128.
 You must select at least one character type in order to be validated.
 
 ## Skill Improved 📚
-✔️ JavaScript Random Integers
-✔️ HTML DOM Document querySelector
-✔️ HTML DOM Element addEventListener
-✔️ JavaScript Window Popup Alert/Confirm/Promt
+✔️ JavaScript Random Integers/
+✔️ HTML DOM Document querySelector/
+✔️ HTML DOM Element addEventListener/
+✔️ JavaScript Window Popup Alert/Confirm/Promt/
 ✔️ JavaScript For Loop/JavaScript While Loop
 
 
