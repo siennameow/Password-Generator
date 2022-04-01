@@ -23,6 +23,7 @@ Please Enjoy! ❤️
 
 ## Webpage Preview ⭐
  
+![Screen Recording 2022-03-31 at 10 15 57 PM (1)](https://user-images.githubusercontent.com/101283174/161199812-3d87d83e-1d16-4aa8-b67f-d79bd60fb3ad.gif)
 
 
 ## Custom Features 📋
