@@ -61,7 +61,7 @@ You must select at least one character type in order to be validated.
 ✔️ HTML DOM Document querySelector
 ✔️ HTML DOM Element addEventListener
 ✔️ JavaScript Popup Alert/Confirm/Promt
-✔️ JavaScript For Loop
+✔️ JavaScript For Loop/JavaScript While Loop
 
 
 ## Technologies 🔧

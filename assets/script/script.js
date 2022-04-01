@@ -24,7 +24,7 @@ function draw (pool){
 
 //Step 3.3 create a function that record userpick and put different variable into different placeholder.
     //Make sure I got at least 1 character from the user picked array and add together all the user-pick-arrays to a remaim-array to draw the the rest of password. 
-    //The character remain for drawing = the password length they choose - how many character type they choose.
+    //The character remain for drawing = the password length they select - how many character type they choose.
 function record(userInput,sourceArray,recordResult, remainPool) {
   if (userInput === true){
     var record1Draw = draw(sourceArray);
@@ -32,6 +32,23 @@ function record(userInput,sourceArray,recordResult, remainPool) {
     remainPool.push(...sourceArray)
     }
 }
+
+//add a shuffle function, meow is a placeholder.
+function shuffle(meow) {
+  var currentIndex = meow.length,  randomIndex;
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    // And swap it with the current element.
+    [meow[currentIndex], meow[randomIndex]] = [
+      meow[randomIndex], meow[currentIndex]];
+  }
+  return meow;
+}
+
+
 //Step 3.4 create function that to generate user prompt/alert/confirm according to user preference.
 function generatePassword() {
   var passwordLength = prompt("How many characters would you like your password to contain?");
@@ -67,21 +84,16 @@ function generatePassword() {
                       var record2Draw = draw(remainPool);
                       recordResult.push(record2Draw);
                     }
-              // var finalPassword = recordResult.join("");
-              // return finalPassword;
+
               // Step 3.7 : Shuffle the initial password to generate the final password.
-                // var finalPassword = [];
-                // var restDraw = recordResult ;
-                // for (var i = 0; i<recordResult.length; i++) {
-                //     var pick =  Math.floor(Math.random() * restDraw.length);
-                //     finalPassword.push(restDraw[pick]);
-                //     restDraw.splice(pick, 1);
-                //   }
-                console.log(recordResult.join(""));
-                //console.log(finalPassword.join(""));
-                // return finalPassword;
+                // console.log(recordResult.join("")); check the recorded-password
+                var shuffledPassword = shuffle(recordResult);
+                // console.log(shuffledPassword.join("")); check the final password, should be shuffled.
+                var finalPassword = shuffledPassword.join("");
+                return finalPassword;
           }
-       }  
+       } 
+       return "Please try one more time!";
 }
 
 //Step 4: Write password to the #password input
