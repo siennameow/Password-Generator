@@ -36,12 +36,32 @@ Please Enjoy! ❤️
 
 ## Code-Snippet 💻
 
-HTML
+JavaScript
 
-```html
+Create a function that draw random character from an array.
+```JavaScript
+function draw (pool){
+  var pick1 =  Math.floor(Math.random() * pool.length);
+  return pool[pick1];
+}
+```
 
+The Window confirm() create user interaction and generate user select result.
+```JavaScript
+   var uppercase = confirm("Include uppercase characters?");
+   var lowercase = confirm("Include lowercase characters?");
+   var number = confirm("Include numeric characters?");
+   var special = confirm("Include special characters?");
+```
 
-
+The "if-else Statement" make sure user select at least one character type
+```JavaScript
+   if (uppercase + lowercase + number + special === 0) {
+            alert("Your should select at least one character type!");
+          }
+  else {
+          alert("You are good to go!");
+        }
 ```
 
 
@@ -63,7 +83,7 @@ You must select at least one character type in order to be validated.
 ✔️ JavaScript Random Integers
 ✔️ HTML DOM Document querySelector
 ✔️ HTML DOM Element addEventListener
-✔️ JavaScript Popup Alert/Confirm/Promt
+✔️ JavaScript Window Popup Alert/Confirm/Promt
 ✔️ JavaScript For Loop/JavaScript While Loop
 
 
