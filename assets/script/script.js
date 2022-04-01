@@ -15,6 +15,11 @@ var specialSource = [" ","!","#","$","%","&","'","(",'"',")","*","+",",","-","."
 
 
 //Step 2.2 create a function that draw random character from the source array.
+function draw (pool){
+  var pick1 =  Math.floor(Math.random() * pool.length);
+  return pool[pick1];
+}
+
 //Step 2.3 create a function that record userpick and put different variable into different placeholder.
 
 //Step 2.4 create function that to generate user prompt/alert/confirm according to user preference.
@@ -41,10 +46,11 @@ function generatePassword() {
 
 
 
-//Step 2.6 :collect placeholder result and add it to the final password.
+//Step 2.6 :collect placeholder result and add it to the initial password.
 
 
 
+// Step 2.7 : Shuffle the initial password to generate the final password.
   }
 
 }
