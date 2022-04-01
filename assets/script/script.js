@@ -50,7 +50,7 @@ function shuffle(meow) {
 function generatePassword() {
   var passwordLength = prompt("How many characters would you like your password to contain?");
   
-  if (passwordLength === null || passwordLength< 8 || passwordLength > 128 || Number.isInteger(passwordLength)==false) {
+  if (passwordLength === null || passwordLength< 8 || passwordLength > 128 ) {
           alert("Your password should be at least 8 characters and no more than 128 characters!");
       }
  
