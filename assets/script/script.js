@@ -1,6 +1,3 @@
-// GOAL:    generatePassword() {
-//   return "Please Try Again!" ;
-// }
 //Step 1: Assignment Code
 var generateBtn = document.querySelector("#generate");
 
