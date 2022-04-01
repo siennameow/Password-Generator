@@ -1,6 +1,9 @@
 // GOAL:    generatePassword() {
 //   return "Please Try Again!" ;
 // }
+//Step 3: Assignment Code
+var generateBtn = document.querySelector("#generate");
+
 
 //Step 1: Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
@@ -26,7 +29,7 @@ function draw (pool){
 function record(userInput,sourceArray,recordResult, remainPool) {
   if (userInput === true){
     var record1Draw = draw(sourceArray);
-    recordResult.push(...record1Draw);
+    recordResult.push(record1Draw);
     remainPool.push(...sourceArray)
     }
 }
@@ -49,52 +52,52 @@ function generatePassword() {
         }
         else {
         alert("You are good to go!");
-        }
-//Step 2.5 : if user complete the pick, then do the function in step2.3
-        var recordResult = []
+
+        //Step 2.5 : if user complete the pick and "Good to go!", then do the function in step2.3
+        var recordResult = [];
         var remainPool = [];
 
         record(uppercase,uppercaseSource,recordResult,remainPool);
         record(lowercase,lowercaseSource,recordResult,remainPool);
         record(number,numberSource,recordResult,remainPool);
-        record(character,characterSource,recordResult,remainPool);
+        record(special,specialSource,recordResult,remainPool);
 
-
-//Step 2.6 :collect placeholder result and add it to the initial password.
-        var remainAttempt = passwordLength - (uppercase+lowercase+number+character);
+        //Step 2.6 :collect placeholder result and add it to the initial password.  
+        var remainAttempt = passwordLength - (uppercase+lowercase+number+special);
 
         for (var i = 0; i<remainAttempt; i++) {
                   var record2Draw = draw(remainPool);
                   recordResult.push(record2Draw);
             }
-          
+
+          var finalPassword = recordResult.join("");
+          return finalPassword;
+        }
 
 // Step 2.7 : Shuffle the initial password to generate the final password.
-            function shuffle(meow) {
+            // function shuffle(meow) {
   
-                  var finalPassword = [];
-                  var restDraw = meow ;
-                  for (var i = 0; i<meow.lenth; i++) {
-                          var pick =  Math.floor(Math.random() * restDraw.length);
-                          finalPassword.push(restDraw[pick]);
-                          restDraw.splice(pick, 1);
-                      }
+            //       var finalPassword = [];
+            //       var restDraw = meow ;
+            //       for (var i = 0; i<meow.lenth; i++) {
+            //               var pick =  Math.floor(Math.random() * restDraw.length);
+            //               finalPassword.push(restDraw[pick]);
+            //               restDraw.splice(pick, 1);
+            //           }
                   
-                  return finalPassword;
-                }
+            //       return finalPassword;
+            //     }
 
-              var shuffledPassword = shuffle(recordResult);
+            //   var shuffledPassword = shuffle(recordResult);
 
-              var finalPassword = shuffledPassword.join("");
+            //   var finalPassword = shuffledPassword.join("");
     
-              return finalPassword;
+            //   return finalPassword;
 
 
   }
 
 }
-
-
 
 //Step 3: Assignment Code
 var generateBtn = document.querySelector("#generate");
